@@ -1,0 +1,70 @@
+body, html
+  height: 100%
+
+body
+  margin: 0px
+  background: url("../images/bg.jpg") no-repeat top center
+  font-size: 18px
+  color: lightblue
+
+a
+  &:link, &:visited, &:active
+    color: lightblue
+
+.title, .addDancerButton
+  padding: 5px 12px
+  float: right
+
+.topbar
+  height: 32px
+  background-color: #555
+
+.title
+  background-color: #777
+
+.dancer
+  position: absolute
+
+.blinky
+  border: 10px solid red
+  border-radius: 10px
+
+.bouncy
+  height: 20px
+  width: 20px
+  background-color: green
+  border-radius: 4px
+  +transition(.5s)
+  display: block
+  &.active
+    +translateY(500px)
+
+.rolly
+  background-image: image-url("Ball-15-icon.png")
+  width: image-width("Ball-15-icon.png")
+  height: image-height("Ball-15-icon.png")
+  +transition(5s)
+  display: block 
+  &.active
+    // +transform($trans-x: 100px, $trans-z: 100px)
+    +rotateZ(100000000deg)
+    //+transformY(100px)
+
+
+.awkward
+  height: 100px
+  width: 100px
+  background-color: #ccc
+  +transition(150s transform)
+  &.active
+    +rotateZ(360000deg)
+    background-image: image-url("awkward.gif")
+
+
+.pacman
+  background-image: image-url("pacman.gif")
+  height: 90px
+  width: 90px
+  border-radius: 300px
+  display: block
+  +transition(.5s linear)

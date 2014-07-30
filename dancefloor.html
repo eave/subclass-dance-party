@@ -2,15 +2,27 @@
 <html>
   <head>
     <title>Object Dance Party</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/screen.css" />
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
+    <script src="src/bouncyDancer.js"></script>
+    <script src="src/rollingDancer.js"></script>
+    <script src="src/pacmanDancer.js"></script>
+    <script src="src/awkwardDancer.js"></script>
+    <script src="src/pacmanDancer.js"></script>
+    <audio id="pacman" src="waka_waka.mp3" loop></audio>
   </head>
   <body>
     <div class="topbar">
       <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>    </div>
+      <a href="#" class="lineUp">line up</a>
+      <a href="#" class="addDancerButton" data-class="blinky" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>
+      <a href="#" class="addDancerButton" data-class="bouncy" data-dancer-maker-function-name="BouncyDancer">add a bouncy dancer</a>
+      <a href="#" class="addDancerButton" data-class="rolly" data-dancer-maker-function-name="RollingDancer">add a rolling dancer</a>
+      <a href="#" class="addDancerButton" data-class="awkward" data-dancer-maker-function-name="AwkwardDancer">add an awkward dancer</a>
+      <a href="#" class="addDancerButton" data-class="pacman" data-dancer-maker-function-name="PacmanDancer" onclick="document.getElementById('pacman').play();">add a pacman dancer</a>
+    </div>
     <script src="src/init.js"></script>
   </body>
 </html>
